@@ -4,11 +4,12 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="icon" href="../img/favicon.ico" type="image/x-icon" border-radius="50%"> 
-       <link rel="stylesheet" href="style.css">
-       <link rel="stylesheet" href="table.css">       
+       <link rel="stylesheet" href="../style/style.css">
+       <link rel="stylesheet" href="../style/table.css">       
  
        <title>Giỏ Hàng</title>
 </head>
+
 <header>
        <div id="icon-header" class="header-inline">
               <img src="../img/logo.ico" alt="Logo" width="100px">
@@ -34,23 +35,11 @@
                             <th class="ten">Tên sách</th>
                             <th>Số lượng</th>
                             <th>Giá</th>
-                            <th>Trạng thái</th>
+                            <th>Chọn</th>
                      </tr>
               </thead>
-              <tbody>
-                                   <tr>
-                     <td>1</td>
-                     <td class="ten">Tên</td>
-                     <td>1</td>
-                     <td>1000</td>
-                     <td>
-                            <label class="checkbox-container">
-                                   <input type="checkbox">
-                                   <span class="checkmark"></span>
-                            </label>
-                     </td>
-                     
-              </tr>
+              <tbody id="list">
+
               </tbody>
 
 
@@ -63,6 +52,7 @@
               </tfoot>
               
        </table>
+       <script src="../js/giohang.js"></script>
 
 </body>
 </html>
