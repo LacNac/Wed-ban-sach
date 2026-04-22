@@ -496,17 +496,13 @@ input.error {
   display: flex;
 }
 footer {
-  background: var(--blue-dark);
-  color: black;
+  background: #333;
+  color: white;
   text-align: center;
-  padding: 18px;
-  font-size: 18px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
 }
-footer span {
-  color: var(--accent);
-  font-weight: 600;
-}
-
 @media (max-width: 520px) {
   .auth-inner {
     padding: 28px 24px 36px;
