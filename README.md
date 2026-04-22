@@ -1,9 +1,7 @@
 # 📚 Inkognito - Website Bán Sách Online
 
 ## 🔗 Demo
-👉 https://lacnac.github.io/Wed-ban-sach/
-
-## hoặc sử dụng clone repo và chạy file index.html
+sử dụng clone repo và chạy file index.html
 
 ---
 
