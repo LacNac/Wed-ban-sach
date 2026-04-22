@@ -38,6 +38,11 @@
         <p>/</p>
         <a href="../login/login.html?action=register">Đăng Kí</a>
       </nav>
+      <div id="nav-user-info">
+        <div class="avatar" id="nav-avatar">U</div>
+        <span class="username" id="nav-username">User</span>
+        <button id="btn-logout" onclick="logout()">Đăng xuất</button>
+      </div>
     </header>
 
     <div class="search-bar">
@@ -98,5 +103,28 @@
     </section>
 
     <script src="../js/sanpham.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sess = JSON.parse(localStorage.getItem("bs_session") || "null");
+
+        const guestArea = document.getElementById("login");
+        const userInfo = document.getElementById("nav-user-info");
+        if (sess && (!sess.exp || Date.now() < sess.exp)) {
+          if (guestArea) guestArea.style.display = "none";
+          if (userInfo) {
+            userInfo.style.display = "flex"; // Hiện cụm Avatar + Tên
+            document.getElementById("nav-avatar").textContent =
+              sess.name[0].toUpperCase();
+            document.getElementById("nav-username").textContent = sess.name
+              .split(" ")
+              .pop();
+          }
+        }
+      });
+      function logout() {
+        localStorage.removeItem("bs_session");
+        window.location.reload();
+      }
+    </script>
   </body>
 </html>
